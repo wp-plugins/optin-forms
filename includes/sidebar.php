@@ -1,9 +1,9 @@
 <?php ?>
 
                 <div class="optinforms-ad-product">
-                    	<h4><a href="http://www.codeleon.com/wordpress/plugins/wp-video-coach/" target="_blank">WP Video Coach - WordPress Video Tutorial</a></h4>
+                    	<h4><a href="http://www.codeleon.com/ie5t" target="_blank">WP Video Coach - WordPress Video Tutorial</a></h4>
                         <p>The WordPress Video Coach plugin loads a complete set of High Definition step-by-step WordPress tutorial videos directly into your clients' dashboard. Saves you valuable time!</p>
-                    	<div class="optinforms-ad-product-button"><a href="http://www.codeleon.com/wordpress/plugins/wp-video-coach/" target="_blank"><?php echo __('Download the Plugin', 'optinforms'); ?></a></div>
+                    	<div class="optinforms-ad-product-button"><a href="http://www.codeleon.com/ie5t" target="_blank"><?php echo __('Download the Plugin', 'optinforms'); ?></a></div>
                 </div><!--optinforms-ad-product-->
                 <div class="optinforms-ad">
                     <ul>

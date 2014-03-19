@@ -25,6 +25,11 @@ function optinforms_register_settings()
 	register_setting( 'optinforms-settings-group', 'optinforms_form_design' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form_placement_post' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form_placement_page' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form_placement_popup' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form_placement_box' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form_placement_bar' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form_exclude_posts' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form_exclude_pages' );
 	register_setting( 'optinforms-settings-group', 'optinforms_powered_by' );
 	
 	register_setting( 'optinforms-settings-group', 'optinforms_form1_background' );
@@ -53,6 +58,11 @@ function optinforms_register_settings()
 	register_setting( 'optinforms-settings-group', 'optinforms_form1_disclaimer_color' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form1_width' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form1_width_pixels' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form1_hide_title' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form1_hide_subtitle' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form1_hide_name_field' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form1_hide_disclaimer' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form1_css' );
 	
 	register_setting( 'optinforms-settings-group', 'optinforms_form2_background' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form2_title' );
@@ -74,6 +84,9 @@ function optinforms_register_settings()
 	register_setting( 'optinforms-settings-group', 'optinforms_form2_disclaimer_color' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form2_width' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form2_width_pixels' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form2_hide_title' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form2_hide_disclaimer' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form2_css' );
 	
 	register_setting( 'optinforms-settings-group', 'optinforms_form3_background' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form3_title' );
@@ -96,6 +109,10 @@ function optinforms_register_settings()
 	register_setting( 'optinforms-settings-group', 'optinforms_form3_button_background' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form3_width' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form3_width_pixels' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form3_hide_title' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form3_hide_subtitle' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form3_hide_name_field' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form3_css' );
 	
 	register_setting( 'optinforms-settings-group', 'optinforms_form4_background' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form4_border' );
@@ -122,6 +139,10 @@ function optinforms_register_settings()
 	register_setting( 'optinforms-settings-group', 'optinforms_form4_disclaimer_color' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form4_width' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form4_width_pixels' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form4_hide_title' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form4_hide_subtitle' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form4_hide_disclaimer' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form4_css' );
 	
 	register_setting( 'optinforms-settings-group', 'optinforms_form5_background' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form5_title' );
@@ -148,5 +169,10 @@ function optinforms_register_settings()
 	register_setting( 'optinforms-settings-group', 'optinforms_form5_disclaimer_color' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form5_width' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form5_width_pixels' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form5_hide_title' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form5_hide_subtitle' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form5_hide_name_field' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form5_hide_disclaimer' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form5_css' );
 }
 ?>

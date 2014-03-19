@@ -3,15 +3,15 @@ Contributors: brs
 Tags: optin, form, forms, aweber, icontact, mailchimp, getresponse, mad mimi, interspire, email marketer, email marketing, email, e-mail, list, list building, opt-in, newsletter, autoresponder, popup, pop-up, mailing, mailing list, mail, webform, newsletter plugin, optin plugin, opt-in plugin, conversion, design
 Requires at least: 3.2
 Tested up to: 3.8.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
 
 == Description ==
 
-**Create beautiful optin forms with ease!**
+**Create Beautiful Optin Forms With Ease!**
 
-Optin Forms allows you to create stunning optin forms for your blog or website, without the need to know any HTML or CSS. Simply select your email solution, pick a form design and customize its appearance. Add your form to your posts and pages with a simple mouse-click.
+Optin Forms allows you to create stunning optin forms for your blog or website, without the need to know any HTML or CSS. Simply select your email solution, pick a form design and customize its appearance. Add your form to your posts and pages with a simple mouse-click, or use a shortcode to add it to specific posts and pages.
 
 Optin Forms works with the following email solutions:
 
@@ -22,7 +22,7 @@ Optin Forms works with the following email solutions:
 * MadMimi
 * Interspire Email Marketer
 
-**Optin Forms comes with 5 beautiful form designs!**
+**Optin Forms Comes With 5 Beautiful Form Designs!**
 
 All form designs are fully customizable. You can easily change all texts, fonts and font sizes. Change the colors of any element by selecting a new value from the color picker.
 
@@ -43,14 +43,25 @@ Having trouble with the plugin? Simply post your question to the [support forum]
 
 1. Select your email solution and configure the required fields.
 2. Select a form design and customize its appearance.
+3. Hide elements under Form Options.
 3. Add your form to your website with a simple mouse-click.
 
 == Changelog ==
+
+= 1.1 =
+* Added exclude options.
+* Added shortcode.
+* Added form options.
+* Added custom CSS fields.
+* Merged Placement tab with Form tab.
 
 = 1.0 =
 * First version!
 
 == Upgrade Notice ==
+
+= 1.1 =
+New display options, exclude your optin form on specific posts and pages, and add your form with a shortcode!
 
 = 1.0 =
 First version!
