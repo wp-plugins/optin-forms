@@ -4,11 +4,25 @@ Plugin Name: Optin Forms
 Plugin URI: http://www.codeleon.com/wordpress/plugins/optin-forms
 Description: Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
 Author: Codeleon
-Version: 1.1
+Version: 1.1.1
 Author URI: http://www.codeleon.com
-License: Free
 Text Domain: optinforms
 Domain Path:   /languages/
+License:
+  Copyright 2014 codeleon.com
+ 
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License, version 2, as
+  published by the Free Software Foundation.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 // Add translation to plugin
@@ -91,7 +105,6 @@ function optinforms_main_page() {
     <div class="wrap">
     	<div id="icon-optinforms" class="icon32">
         </div><!--icon-32-->
-        
 		<h2 class="title"><?php echo optinforms_menu_tabs(); ?></h2>
     </div><!--wrap-->
     

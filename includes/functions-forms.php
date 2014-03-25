@@ -1,15 +1,48 @@
 <?php
 
+// Get excluded posts and create an array
+function optinforms_get_excluded_posts() {
+	global $optinforms_form_exclude_posts;
+	if(empty($optinforms_form_exclude_posts)) {
+		$optinforms_get_excluded_posts = '0';
+	}
+	if(!is_string($optinforms_form_exclude_posts)) {
+		$optinforms_get_excluded_posts = '0';
+	}
+	else {
+	  $optinforms_get_excluded_posts = explode(',', $optinforms_form_exclude_posts);
+	}
+	return $optinforms_get_excluded_posts;
+}
+
+// Get excluded pages and create an array
+function optinforms_get_excluded_pages() {
+	global $optinforms_form_exclude_pages;
+	if(empty($optinforms_form_exclude_pages)) {
+		$optinforms_get_excluded_pages = '0';
+	}
+	if(!is_string($optinforms_form_exclude_pages)) {
+		$optinforms_get_excluded_pages = '0';
+	}
+	else {
+	  $optinforms_get_excluded_pages = explode(',', $optinforms_form_exclude_pages);
+	}
+	return $optinforms_get_excluded_pages;
+}
+
 // Insert form on post, after first paragraph
 add_filter( "the_content", "optinform_insert_form_first_paragraph_post" );
 
 function optinform_insert_form_first_paragraph_post($content) {
 	global $optinforms_form_placement_post, $optinforms_form_exclude_posts;
+	$optinforms_get_excluded_posts = optinforms_get_excluded_posts(); // THIS ONE IS NEW !!!
 	if($optinforms_form_placement_post == '1'){
 		$ad_code = optinforms_create_form();
-		$optinforms_form_exclude_posts = explode(',', $optinforms_form_exclude_posts);
-		if(is_single()) {
-			if(is_single($optinforms_form_exclude_posts)) {
+		if(empty($optinforms_form_exclude_posts) && is_single()) {
+			return optinform_insert_form_after_paragraph($ad_code, 1, $content);
+		}
+		elseif (!empty($optinforms_form_exclude_posts) && is_single()) {
+			if(is_single($optinforms_get_excluded_posts)) {
 				// do nothing
 			}
 			else {
@@ -27,12 +60,12 @@ function optinform_insert_form_first_paragraph_post($content) {
 add_filter( "the_content", "optinform_insert_form_first_paragraph_page" );
 
 function optinform_insert_form_first_paragraph_page($content) {
-	global $optinforms_form_placement_page, $optinforms_form_exclude_pages;
+	global $optinforms_form_placement_page;
+	$optinforms_get_excluded_pages = optinforms_get_excluded_pages(); // THIS ONE IS NEW !!!
 	if($optinforms_form_placement_page == '1'){
 		$ad_code = optinforms_create_form();
-		$optinforms_form_exclude_pages = explode(',', $optinforms_form_exclude_pages);
 		if(is_page()) {
-			if(is_page($optinforms_form_exclude_pages)) {
+			if(is_page($optinforms_get_excluded_pages)) {
 				// do nothing
 			}
 			else {
@@ -50,12 +83,12 @@ function optinform_insert_form_first_paragraph_page($content) {
 add_filter( "the_content", "optinform_insert_form_second_paragraph_post" );
 
 function optinform_insert_form_second_paragraph_post($content) {
-	global $optinforms_form_placement_post, $optinforms_form_exclude_posts;
+	global $optinforms_form_placement_post;
+	$optinforms_get_excluded_posts = optinforms_get_excluded_posts(); // THIS ONE IS NEW !!!
 	if($optinforms_form_placement_post == '2'){
 		$ad_code = optinforms_create_form();
-		$optinforms_form_exclude_posts = explode(',', $optinforms_form_exclude_posts);
 		if(is_single()) {
-			if(is_single($optinforms_form_exclude_posts)) {
+			if(is_single($optinforms_get_excluded_posts)) {
 				// do nothing
 			}
 			else {
@@ -73,12 +106,12 @@ function optinform_insert_form_second_paragraph_post($content) {
 add_filter( "the_content", "optinform_insert_form_second_paragraph_page" );
 
 function optinform_insert_form_second_paragraph_page($content) {
-	global $optinforms_form_placement_page, $optinforms_form_exclude_pages;
+	global $optinforms_form_placement_page;
+	$optinforms_get_excluded_pages = optinforms_get_excluded_pages(); // THIS ONE IS NEW !!!
 	if($optinforms_form_placement_page == '2'){
 		$ad_code = optinforms_create_form();
-		$optinforms_form_exclude_pages = explode(',', $optinforms_form_exclude_pages);
 		if(is_page()) {
-			if(is_page($optinforms_form_exclude_pages)) {
+			if(is_page($optinforms_get_excluded_pages)) {
 				// do nothing
 			}
 			else {
@@ -112,16 +145,21 @@ add_filter( "the_content", "optinforms_insert_form_after_post" );
 
 function optinforms_insert_form_after_post($content) {
 	global $optinforms_form_placement_post, $optinforms_form_exclude_posts;
+	$optinforms_get_excluded_posts = optinforms_get_excluded_posts(); // THIS ONE IS NEW !!!
 	if($optinforms_form_placement_post == '3' || empty($optinforms_form_placement_post)) {
-		$optinforms_form_exclude_posts = explode(',', $optinforms_form_exclude_posts);
-		if(is_single()) {
-			if(is_single($optinforms_form_exclude_posts)) {
+		
+		if(empty($optinforms_form_exclude_posts) && is_single()) {
+			$content .= optinforms_create_form();
+		}
+		elseif (!empty($optinforms_form_exclude_posts) && is_single()) {
+			if(is_single($optinforms_get_excluded_posts)) {
 				// do nothing
 			}
 			else {
 				$content .= optinforms_create_form();
 			}
 		}
+
 	}
 	return $content;
 }
@@ -131,10 +169,10 @@ add_filter( "the_content", "optinforms_insert_form_after_page" );
 
 function optinforms_insert_form_after_page($content) {
 	global $optinforms_form_placement_page, $optinforms_form_exclude_pages;
+	$optinforms_get_excluded_pages = optinforms_get_excluded_pages(); // THIS ONE IS NEW !!!
 	if($optinforms_form_placement_page == '3' || empty($optinforms_form_placement_page)) {
-		$optinforms_form_exclude_pages = explode(',', $optinforms_form_exclude_pages);
 		if(is_page()) {
-			if(is_page($optinforms_form_exclude_pages)) {
+			if(is_page($optinforms_get_excluded_pages)) {
 				// do nothing
 			}
 			else {
