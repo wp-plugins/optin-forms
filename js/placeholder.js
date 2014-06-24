@@ -100,4 +100,4 @@
 })(jQuery);
 
 // call the plugin
-$("[placeholder]").stickyPlaceholders();
+jQuery("[placeholder]").stickyPlaceholders();

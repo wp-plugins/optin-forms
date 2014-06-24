@@ -1,4 +1,5 @@
 <?php ?>
+                    
 				<div class="toggle-wrap">
                		<span class="trigger">
                     	<a><?php echo __('Form Placement', 'optinforms'); ?></a>

@@ -29,6 +29,7 @@
 	$optinforms_form_exclude_posts = get_option('optinforms_form_exclude_posts');
 	$optinforms_form_exclude_pages = get_option('optinforms_form_exclude_pages');
 	$optinforms_powered_by = get_option('optinforms_powered_by');
+	$optinforms_form_target = get_option('optinforms_form_target');
 
 
 // Add tabs for main page
@@ -188,6 +189,16 @@ function optinforms_form_name_field_interspire() {
 		$optinforms_form_name_field_interspire = "";
 	}
 	return $optinforms_form_name_field_interspire;
+}
+
+// Open our form in a new window?
+function optinforms_form_target_blank() {
+	global $optinforms_form_target;
+	if($optinforms_form_target == 1) {
+		return "target=\"_blank\"";
+	} else {
+		//do nothing
+	}
 }
 
 // Add our identifiers to the form
@@ -360,7 +371,7 @@ function optinforms_powered_by() {
 		// do nothing
 	}
 	elseif($optinforms_powered_by == 1) {
-		return "<div id=\"optinforms-powered-by\">Powered by <a href=\"http://www.codeleon.com/wordpress/plugins/optin-forms\" target=\"_blank\">Optin Forms</a></div><!--optinforms-powered-by-->";
+		return "<div id=\"optinforms-powered-by\">Powered by <a href=\"http://www.codeleon.com/products/optin-forms\" target=\"_blank\">Optin Forms</a></div><!--optinforms-powered-by-->";
 	}
 }
 

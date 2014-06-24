@@ -4,7 +4,7 @@ Plugin Name: Optin Forms
 Plugin URI: http://www.codeleon.com/wordpress/plugins/optin-forms
 Description: Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
 Author: Codeleon
-Version: 1.1.1
+Version: 1.1.2
 Author URI: http://www.codeleon.com
 Text Domain: optinforms
 Domain Path:   /languages/
@@ -42,7 +42,9 @@ add_action( 'admin_menu', 'optinforms_menu' );
 
 function optinforms_menu() 
 {
-	$submenu = add_menu_page(__('Optin Forms','menu-test'), __('Optin Forms','menu-test'), 'manage_options', 'optinforms', 'optinforms_main_page', plugins_url('optin-forms/images/icon.png'), 31);
+	// @since 1.1.2 added a menu position decimal fix to prevent conflict with other themes using 31, such as Thesis Theme
+	// @http://gabrielharper.com/blog/2012/08/wordpress-admin-menu-positioning-conflicts/
+	$submenu = add_menu_page(__('Optin Forms','menu-test'), __('Optin Forms','menu-test'), 'manage_options', 'optinforms', 'optinforms_main_page', plugins_url('optin-forms/images/icon.png'), '30.1');
 	
 	// * We want our JS and CSS loaded on our admin pages only, so let's just load them for now
 	add_action( 'load-' . $submenu, 'load_optinforms_admin_scripts' );
@@ -86,6 +88,7 @@ function optinforms_admin_scripts()
 function optinforms_scripts()
 {
 	global $optinforms_form_design;
+	wp_enqueue_script('jquery');
 	wp_enqueue_style('optinforms-stylesheet', plugins_url('/css/optinforms.css', __FILE__ ), array('googleFont'));
 	wp_enqueue_script('placeholder', plugins_url('/js/placeholder.js', __FILE__ ));
 	wp_register_style('googleFont', optinforms_used_fonts());
@@ -197,6 +200,7 @@ function optinforms_main_page() {
                     </div><!--optinforms_form_design_option5-->
                 </div><!--optiongroup-->
                 
+                <?php include( plugin_dir_path( __FILE__ ) . 'includes/options-form-functionality.php'); ?>
                 <?php include( plugin_dir_path( __FILE__ ) . 'includes/options-form-placement.php'); ?>
                 
         	</div><!--optinforms-container-left-->

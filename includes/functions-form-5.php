@@ -484,8 +484,8 @@ function optinforms_form5_hide_subtitle_disclaimer_css() {
 
 // FORM5: get our custom CSS
 function optinforms_form5_css() {
-	global $optinforms_form1_css;
-	return $optinforms_form1_css;
+	global $optinforms_form5_css;
+	return $optinforms_form5_css;
 }
 
 // FORM5: advanced styling options

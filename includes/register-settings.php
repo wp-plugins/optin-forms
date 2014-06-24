@@ -31,6 +31,7 @@ function optinforms_register_settings()
 	register_setting( 'optinforms-settings-group', 'optinforms_form_exclude_posts' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form_exclude_pages' );
 	register_setting( 'optinforms-settings-group', 'optinforms_powered_by' );
+	register_setting( 'optinforms-settings-group', 'optinforms_form_target' );
 	
 	register_setting( 'optinforms-settings-group', 'optinforms_form1_background' );
 	register_setting( 'optinforms-settings-group', 'optinforms_form1_border' );

@@ -3,7 +3,7 @@ Contributors: brs
 Tags: optin, form, forms, aweber, icontact, mailchimp, getresponse, mad mimi, interspire, email marketer, email marketing, email, e-mail, list, list building, opt-in, newsletter, autoresponder, popup, pop-up, mailing, mailing list, mail, webform, newsletter plugin, optin plugin, opt-in plugin, conversion, design
 Requires at least: 3.2
 Tested up to: 3.9
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 
 Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
 
@@ -48,6 +48,11 @@ Having trouble with the plugin? Simply post your question to the [support forum]
 
 == Changelog ==
 
+= 1.1.2 =
+* Fixed responsive design forms.
+* Added option to open form submissions in a new window.
+* Fixed jQuery warning placeholder.js.
+
 = 1.1.1 =
 * Fixed exclude function.
 
@@ -62,6 +67,9 @@ Having trouble with the plugin? Simply post your question to the [support forum]
 * First version!
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+Fixed responsive design for all form designs and included the option to open form submissions in a new window.
 
 = 1.1.1 =
 Fixed exclude function that caused warnings on certain installations.
