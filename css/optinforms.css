@@ -71,7 +71,7 @@
 
 #optinforms-form2-title-container {display:block;width:100%;margin:0 0 10px;}
 #optinforms-form2-title{text-align:center;}
-#optinforms-form2-email-field-container {display:block;width:100%;}
+#optinforms-form2-email-field-container {display:block;width:100%!important;}
 #optinforms-form2-email-field{background:#fff;text-align:center;}
 #optinforms-form2-button-container {display:block;width:100%;margin:0;}
 #optinforms-form2-disclaimer-container {width:100%;margin:0;}
@@ -91,7 +91,7 @@
 
 #optinforms-form2-title-container {display:block;width:100%;margin:0 0 10px;}
 #optinforms-form2-title{text-align:center;}
-#optinforms-form2-email-field-container {display:block;width:100%;}
+#optinforms-form2-email-field-container {display:block;width:100%!important;}
 #optinforms-form2-email-field{background:#fff;text-align:center;}
 #optinforms-form2-button-container {display:block;width:100%;margin:0;}
 #optinforms-form2-disclaimer-container {width:100%;margin:0;}
@@ -111,7 +111,7 @@
 
 #optinforms-form2-title-container {display:block;width:100%;margin:0 0 10px;}
 #optinforms-form2-title{text-align:center;}
-#optinforms-form2-email-field-container {display:block;width:100%;}
+#optinforms-form2-email-field-container {display:block;width:100%!important;}
 #optinforms-form2-email-field{background:#fff;text-align:center;}
 #optinforms-form2-button-container {display:block;width:100%;margin:0;}
 #optinforms-form2-disclaimer-container {width:100%;margin:0;}
