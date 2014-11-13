@@ -3,7 +3,7 @@ Contributors: brs
 Tags: optin, form, forms, aweber, icontact, mailchimp, getresponse, mad mimi, interspire, email marketer, email marketing, email, e-mail, list, list building, opt-in, newsletter, autoresponder, popup, pop-up, mailing, mailing list, mail, webform, newsletter plugin, optin plugin, opt-in plugin, conversion, design
 Requires at least: 3.2
 Tested up to: 4.0
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 
 Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
 
@@ -28,7 +28,8 @@ All form designs are fully customizable. You can easily change all texts, fonts 
 
 **Translations**
 
-* Spanish - Thanks to Andrew
+* Serbian - Thanks to Ogi from [First Site Guide](http://firstsiteguide.com/)
+* Spanish - Thanks to Andrew from [Web Hosting Hub](http://www.webhostinghub.com/)
 * [Send us your translation](http://www.codeleon.com/contact)
 
 == Installation ==
@@ -53,6 +54,12 @@ Having trouble with the plugin? Simply post your question to the [support forum]
 
 == Changelog ==
 
+= 1.1.4 =
+* Added Serbian translation.
+* Updated AWeber instructions.
+* Updated sidebar admin.
+* Updated mailing form.
+
 = 1.1.3 =
 * Improved responsive design form 02. 
 * Added Spanish translation.
@@ -76,6 +83,9 @@ Having trouble with the plugin? Simply post your question to the [support forum]
 * First version!
 
 == Upgrade Notice ==
+
+= 1.1.4 =
+Updated Aweber instructions and added the Serbian translation for the plugin.
 
 = 1.1.3 =
 Fixed responsive design for the second form and added the Spanish translation for the plugin.

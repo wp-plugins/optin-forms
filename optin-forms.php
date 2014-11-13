@@ -4,7 +4,7 @@ Plugin Name: Optin Forms
 Plugin URI: http://www.codeleon.com/wordpress/plugins/optin-forms
 Description: Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
 Author: Codeleon
-Version: 1.1.3
+Version: 1.1.4
 Author URI: http://www.codeleon.com
 Text Domain: optinforms
 Domain Path:   /languages/
@@ -115,7 +115,7 @@ function optinforms_main_page() {
 
         <?php if( isset($_GET['settings-updated']) ) { ?>
     		<div id="message" class="updated">
-        		<p><strong><?php _e('Settings updated') ?></strong> - <?php echo __('If you enjoy our plugin, why not tweet about it?', 'optinforms'); ?> <a href="https://twitter.com/intent/tweet?original_referer=http://www.codeleon.com/wordpress/plugins/optin-forms/&related=codeleoncom&text=Create%20Beautiful%20Optin%20Forms%20in%20WordPress%20with%20This%20FREE%20Plugin:&url=http://www.codeleon.com/wordpress/plugins/optin-forms" target="_blank"><?php echo __('Share on Twitter', 'optinforms'); ?></a></p>
+        		<p><strong><?php _e('Settings updated') ?></strong> - <?php echo __('If you like Optin Forms, you will love', 'optinforms'); ?> <a href="https://optinlock.com/?utm_source=SaveSettings&utm_medium=link&utm_campaign=OptinForms" target="_blank">Optin Lock</a></p>
     		</div>
 		<?php } ?>
     
@@ -222,7 +222,7 @@ function optinforms_main_page() {
         
         <div id="emailbox">
         	<form method="post" action="http://www.codeleon.com/send/form.php?form=5" id="frmSS5">
-        	<h3><?php echo __('Sign up to receive news about the plugin and other WordPress news', 'optinforms'); ?></h3>
+        	<h3><?php echo __('Learn how to optimize your optin forms and get more subscribers right away!', 'optinforms'); ?></h3>
     		<span><?php echo __('My email is', 'optinforms'); ?></span>
             <input type="text" name="email" value="<?php global $current_user; get_currentuserinfo(); echo $current_user->user_email; ?>" />
             <span><?php echo __('and my name is', 'optinforms'); ?></span>

@@ -34,7 +34,7 @@
                     	<!--<p class="optinforms-integration"><a href="#"></?php echo __('Learn how to integrate aWeber: watch the short video', 'optinforms'); ?></a></p>-->
                         <div class="optiongroup">
                             <div class="optionleft">
-                                <label><a onclick="optinforms_explain_aweber()"><span class="explain">?</span></a></label> <label for="optinforms_form_list_name_aweber" class="nopointer"><?php echo __('List name', 'optinforms'); ?> <span class="required">*</span></label>
+                                <label><a onclick="optinforms_explain_aweber()"><span class="explain">?</span></a></label> <label for="optinforms_form_list_name_aweber" class="nopointer"><?php echo __('List ID', 'optinforms'); ?> <span class="required">*</span></label>
                             </div><!--optionleft-->
                             <div class="optionmiddle">
                                 <input type="text" id="optinforms_form_list_name_aweber" name="optinforms_form_list_name_aweber" value="<?php echo optinforms_form_list_name_aweber(); ?>" />
@@ -53,14 +53,14 @@
                         </script>
                         <div id="optinforms-explain-aweber" style="display:none;">
                             <div class="optinforms-step">
-                            	<h4><?php echo __('How to find your list name', 'optinforms'); ?></h4>
+                            	<h4><?php echo __('How to find your list ID', 'optinforms'); ?></h4>
                                 <p><span class="step">1</span> <?php echo __('Log in to your aWeber account', 'optinforms'); ?></p>
                                 <img src="<?php echo plugins_url(); ?>/optin-forms/images/support-aweber-001.png" class="step-image" />
-                                <p><span class="step">2</span> <?php echo __('Click on My Lists in the navigation menu', 'optinforms'); ?></p>
+                                <p><span class="step">2</span> <?php echo __('Click on List Options in the navigation menu', 'optinforms'); ?></p>
                                 <img src="<?php echo plugins_url(); ?>/optin-forms/images/support-aweber-002.png" class="step-image" />
                                 <p><span class="step">3</span> <?php echo __('Click on List Settings from the submenu options', 'optinforms'); ?></p>
                                 <img src="<?php echo plugins_url(); ?>/optin-forms/images/support-aweber-003.png" class="step-image" />
-                                <p><span class="step">4</span> <?php echo __('You will find your list name in the List Name field', 'optinforms'); ?></p>
+                                <p><span class="step">4</span> <?php echo __('You will find your list ID below the List Name field', 'optinforms'); ?></p>
                                 <img src="<?php echo plugins_url(); ?>/optin-forms/images/support-aweber-004.png" class="step-image" />
                             </div><!--optinforms-step-->
                         </div><!--optinforms-explain-aweber-->

@@ -36,11 +36,13 @@
 .optinforms-offer-right-button {margin: 2px 0 0; color: #fff; background: #21759B; padding: 9px; border: 0; border-radius: 4px; font-size: 14px; font-weight: 700; cursor: pointer; width:100%; text-align: center; text-transform: uppercase; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box;}
 .optinforms-offer-right-button:hover {background: #D54E21;}
 .optinforms-ad-product {display: block; width: 92%; padding: 0 0 25px; margin: 20px 4%; border-bottom: 1px solid #e5e5e5; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box;}
-.optinforms-ad-product h4 {font-size: 16px; margin: 0 0 4px; padding: 0;}
-.optinforms-ad-product p {font-size: 14px!important; line-height: 2em;}
+.optinforms-ad-product h4 {font-size: 20px; margin: 0 0 4px; padding: 0;}
+.optinforms-ad-product p {font-size: 14px!important; line-height: 1.8em;}
+.optinforms-ad-product ul {list-style:inside;}
+.optinforms-ad-product ul li{font-size:14px;line-height:1.8em;}
 
 .optinforms-ad-product-button {padding: 15px 0;}
-.optinforms-ad-product-button a {color: #fff!important; background: #FD5A22; padding: 9px 20px; border: 0; border-radius: 4px; font-size: 14px; font-weight: 700; cursor: pointer; width: 220px; text-align: center; text-transform: uppercase; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box;}
+.optinforms-ad-product-button a {color: #fff!important; background: #FD5A22; padding: 9px 20px; border: 0; border-radius: 4px; font-size: 16px; font-weight: 700; cursor: pointer; width: 220px; text-align: center; text-transform: uppercase; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box;letter-spacing:1px;}
 .optinforms-ad-product-button a:hover {background: #505050; color:#fff!important;}
 
 #optinforms_email_solution_option1, #optinforms_email_solution_option2, #optinforms_email_solution_option3, #optinforms_email_solution_option4, #optinforms_email_solution_option5, #optinforms_email_solution_option6, #optinforms_form_design_option1, #optinforms_form_design_option2, #optinforms_form_design_option3, #optinforms_form_design_option4, #optinforms_form_design_option5, #optinforms_form_design_option6 {display:none;}
