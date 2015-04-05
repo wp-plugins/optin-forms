@@ -3,13 +3,13 @@
 Plugin Name: Optin Forms
 Plugin URI: http://www.codeleon.com/wordpress/plugins/optin-forms
 Description: Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
-Author: Codeleon
-Version: 1.1.4
+Author: Boris Beo
+Version: 1.1.5
 Author URI: http://www.codeleon.com
 Text Domain: optinforms
 Domain Path:   /languages/
 License:
-  Copyright 2014 codeleon.com
+  Copyright 2015 codeleon.com
  
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License, version 2, as
@@ -42,15 +42,15 @@ add_action( 'admin_menu', 'optinforms_menu' );
 
 function optinforms_menu() 
 {
-	// @since 1.1.2 added a menu position decimal fix to prevent conflict with other themes using 31, such as Thesis Theme
+	// Since 1.1.2 added a menu position decimal fix to prevent conflict with other themes using 31, such as Thesis Theme
 	// @http://gabrielharper.com/blog/2012/08/wordpress-admin-menu-positioning-conflicts/
 	$submenu = add_menu_page(__('Optin Forms','menu-test'), __('Optin Forms','menu-test'), 'manage_options', 'optinforms', 'optinforms_main_page', plugins_url('optin-forms/images/icon.png'), '30.1');
 	
-	// * We want our JS and CSS loaded on our admin pages only, so let's just load them for now
+	// We want our JS and CSS loaded on our admin pages only, so let's just load them for now
 	add_action( 'load-' . $submenu, 'load_optinforms_admin_scripts' );
 }
 
-// Enqueue our CSS and JS on WP Video Coach admin pages only
+// Enqueue our CSS and JS on Optin Forms admin pages only
 function load_optinforms_admin_scripts() {
 	add_action( 'admin_enqueue_scripts', 'optinforms_admin_scripts' );
 }
@@ -71,13 +71,14 @@ include( plugin_dir_path( __FILE__ ) . 'includes/functions-forms.php');
 // Add our CSS and JS to admin head, but just for our pages (see load_optinforms_admin_scripts above!)
 function optinforms_admin_scripts()
 {
-	wp_enqueue_style('optinforms-admin-stylesheet', plugins_url('/css/optinforms-admin.css', __FILE__ ), array('googleFont'));
+	wp_enqueue_style('optinforms-admin-stylesheet', plugins_url('/css/optinforms-admin.css', __FILE__ ), array('optinforms-googleFont'));
 	wp_enqueue_script('tabcontent', plugins_url('/js/tabcontent.js', __FILE__ ));
 	wp_enqueue_style('wp-color-picker');
 	wp_enqueue_script('optinforms-color', plugins_url('/js/optinforms-color.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
 	wp_enqueue_script('placeholder', plugins_url('/js/placeholder.js', __FILE__ ));
 	wp_enqueue_script('toggle', plugins_url('/js/custom.js', __FILE__ ));
-	wp_register_style('googleFont', 'http://fonts.googleapis.com/css?family=Share+Tech|Droid+Sans|Lobster|Fenix|Unkempt|Flavors|Viga|Damion|Oleo+Script|Racing+Sans+One|Nixie+One|Fredoka+One|Open+Sans|Overlock+SC|Bubbler+One|Contrail+One|Gochi+Hand|Roboto+Condensed|Russo+One|Cinzel+Decorative|News+Cycle|Marcellus+SC|Chewy|Quicksand|Sanchez|Signika+Negative|Gloria+Hallelujah|Grand+Hotel|Droid+Serif|Englebert|Oswald|Pacifico|Titan+One|Shadows+Into+Light|Dancing+Script|Luckiest+Guy|Parisienne|Coming+Soon|Baumans|Belgrano');
+	wp_enqueue_script('jquery-ui-slider');
+	wp_register_style('optinforms-googleFont', 'http://fonts.googleapis.com/css?family=Share+Tech|Droid+Sans|Lobster|Fenix|Unkempt|Flavors|Viga|Damion|Oleo+Script|Racing+Sans+One|Nixie+One|Fredoka+One|Open+Sans|Overlock+SC|Bubbler+One|Contrail+One|Gochi+Hand|Roboto+Condensed|Russo+One|Cinzel+Decorative|News+Cycle|Marcellus+SC|Chewy|Quicksand|Sanchez|Signika+Negative|Gloria+Hallelujah|Grand+Hotel|Droid+Serif|Englebert|Oswald|Pacifico|Titan+One|Shadows+Into+Light|Dancing+Script|Luckiest+Guy|Parisienne|Coming+Soon|Baumans|Belgrano');
 }
 
 // Enqueue our form CSS on front end
@@ -89,10 +90,17 @@ function optinforms_scripts()
 {
 	global $optinforms_form_design;
 	wp_enqueue_script('jquery');
-	wp_enqueue_style('optinforms-stylesheet', plugins_url('/css/optinforms.css', __FILE__ ), array('googleFont'));
+	wp_enqueue_style('optinforms-stylesheet', plugins_url('/css/optinforms.css', __FILE__ ), array('optinforms-googleFont'));
 	wp_enqueue_script('placeholder', plugins_url('/js/placeholder.js', __FILE__ ));
-	wp_register_style('googleFont', optinforms_used_fonts());
+	wp_register_style('optinforms-googleFont', optinforms_used_fonts());
 }
+
+// Add additional scripts to admin head on all admin pages (so supportbox slider will work on all pages!)
+function optinforms_load_additional_scripts(){
+	wp_enqueue_style('optinforms-admin-slider-stylesheet', plugins_url('/css/optinforms-admin-slider.css', __FILE__ ));
+	wp_enqueue_script('jquery-ui-slider');
+}
+add_action( 'admin_enqueue_scripts', 'optinforms_load_additional_scripts' );
 
 // Make sure user can manage options
 function optinforms_options() {
@@ -106,9 +114,10 @@ function optinforms_main_page() {
 	
 	{ ?>
     <div class="wrap">
+    	<h2><?php echo __('Optin Forms', 'optinforms'); ?></h2>
     	<div id="icon-optinforms" class="icon32">
         </div><!--icon-32-->
-		<h2 class="title"><?php echo optinforms_menu_tabs(); ?></h2>
+		<h3 class="title"><?php echo optinforms_menu_tabs(); ?></h3>
     </div><!--wrap-->
     
 		<?php echo optinforms_configuration(); ?>
@@ -230,7 +239,8 @@ function optinforms_main_page() {
             <input type="hidden" name="format" value="h" />
             <input type="submit" class="emailbox-subscribe" value="<?php echo __('Subscribe', 'optinforms'); ?>" />
             </form>
-    	</div><!--emailbox-->
+    	</div><!--emailbox-->  
+        
 	</div><!--optinforms-->
 
 <?php }

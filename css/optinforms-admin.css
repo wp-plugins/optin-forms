@@ -202,7 +202,7 @@
 #tabcontainer {margin: 20px 0; padding: 4% 2% 2% 2%;}
 .shadetabs {padding: 3px 0; margin: 0 0 15px 0; list-style-type: none; text-align: left; /*set to left, center, or right to align the menu as desired*/}
 .shadetabs li {display: inline; float: left; margin: 2px 3px;}
-.shadetabs li a {background: none repeat scroll 0 0 #f7f7f7; border-radius: 4px; padding-top: 4px; position: relative; padding: 5px 10px; z-index: 1; font-size: 16px; color: #AAA!important; text-decoration: none; outline: 0; display: table-cell;}
+.shadetabs li a {background: none repeat scroll 0 0 #f7f7f7; border-radius: 4px; padding-top: 4px; position: relative; padding: 5px 10px; z-index: 1; font-size: 16px; color: #AAA!important; text-decoration: none; outline: 0; display: table-cell; font-weight:400!important; line-height: 29px;}
 .shadetabs li a:visited, .shadetabs li a:hover {color: #2d2b2b;}
 .shadetabs li a.selected {/*selected main tab style */background: none repeat scroll 0 0 #FFF; border:0; color: #111111!important; position: relative;}
 .shadetabs li a.selected:hover {/*selected main tab style */ text-decoration: none;}
