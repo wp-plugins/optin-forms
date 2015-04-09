@@ -380,7 +380,7 @@ function optinforms_supportbox_notice_115() {
 	
 	global $current_user;
 	$userid = $current_user->ID;
-	if ( !get_user_meta( $userid, 'optinforms_dismiss_supportbox_115' ) ) {
+	if ( current_user_can('manage_options') && !get_user_meta( $userid, 'optinforms_dismiss_supportbox_115' ) ) {
     ?>
     <div class="updated" style="background:#02C2A8;border-color:#109785;margin:20px 0 40px;">
     	<div class="optinforms-supportbox-left">

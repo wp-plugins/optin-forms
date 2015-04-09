@@ -4,7 +4,7 @@ Plugin Name: Optin Forms
 Plugin URI: http://www.codeleon.com/wordpress/plugins/optin-forms
 Description: Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
 Author: Boris Beo
-Version: 1.1.5
+Version: 1.1.6
 Author URI: http://www.codeleon.com
 Text Domain: optinforms
 Domain Path:   /languages/
