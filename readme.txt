@@ -3,7 +3,7 @@ Contributors: brs
 Tags: optin, form, forms, aweber, icontact, mailchimp, getresponse, mad mimi, interspire, email marketer, email marketing, email, e-mail, list, list building, opt-in, newsletter, autoresponder, popup, pop-up, mailing, mailing list, mail, webform, newsletter plugin, optin plugin, opt-in plugin, conversion, design
 Requires at least: 3.2
 Tested up to: 4.1.1
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 
 Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
 
@@ -55,6 +55,9 @@ Having trouble with the plugin? Simply post your question to the [support forum]
 
 == Changelog ==
 
+= 1.1.7 =
+* Restricted pledge box to Optin Forms page only.
+
 = 1.1.6 =
 * Restricted pledge box to admins only.
 
@@ -93,6 +96,9 @@ Having trouble with the plugin? Simply post your question to the [support forum]
 * First version!
 
 == Upgrade Notice ==
+
+= 1.1.7 =
+Restricted pledge box to Optin Forms page only.
 
 = 1.1.6 =
 Restricted pledge box to admin users only.
