@@ -2,7 +2,7 @@
 Contributors: brs
 Tags: optin, form, forms, aweber, icontact, mailchimp, getresponse, mad mimi, interspire, email marketer, email marketing, email, e-mail, list, list building, opt-in, newsletter, autoresponder, popup, pop-up, mailing, mailing list, mail, webform, newsletter plugin, optin plugin, opt-in plugin, conversion, design
 Requires at least: 3.2
-Tested up to: 4.1.1
+Tested up to: 4.2.2
 Stable tag: 1.1.7
 
 Create beautiful optin forms with ease. Choose a form design, customize it, and add your form to your blog with a simple mouse-click.
